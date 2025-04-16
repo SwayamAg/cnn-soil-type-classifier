@@ -38,7 +38,7 @@ pip install -r requirements.txt
 The trained model is available on Google Drive. Follow these steps to download and set up the model:
 
 1. Download the model file:
-   - Click on this link: [Download Model]([https://drive.google.com/your-model-link](https://drive.google.com/drive/folders/1n0oR9dz6a_AEsHSuSPyHdb-ibs1eNGv_?usp=sharing))
+   - Click on this link: [Download Model](https://drive.google.com/drive/folders/1n0oR9dz6a_AEsHSuSPyHdb-ibs1eNGv_?usp=sharing)
    - The file will be named `soil_classifier_model.h5`
 
 2. Place the model file:
