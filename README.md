@@ -101,6 +101,18 @@ The system provides specific crop recommendations for each soil type:
 - **Peat Soil**: Rice (Paddy), Potatoes, Sugar Beet, Vegetables
 - **Yellow Soil**: Groundnut, Maize, Cotton, Pulses, Oilseeds
 
+## 📽️ Project Demo
+
+Check out the working demo of the project in action! 👇
+
+🎥 **Video Walkthrough:**  
+[Click here to watch the demo video](Demo.mp4)
+
+This video showcases:
+- 🖼️ Soil image predictions  
+- 🌾 Real-time crop recommendations  
+- 🖥️ Streamlit UI demonstration
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
