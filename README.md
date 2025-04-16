@@ -14,14 +14,6 @@ A deep learning-based web application that identifies soil types from images and
   - Peat Soil
   - Yellow Soil
 
-## 📋 Prerequisites
-
-- Python 3.7+
-- TensorFlow
-- Streamlit
-- NumPy
-- Keras
-
 ## 🛠️ Installation
 
 1. Clone the repository:
@@ -91,13 +83,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors and maintainers
-- Special thanks to the open-source community for their valuable tools and libraries
-- Thanks to Streamlit for providing an excellent platform for deploying ML applications
-
-## 📞 Contact
-
-For any queries or suggestions, please open an issue in the repository. 
