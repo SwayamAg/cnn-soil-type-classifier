@@ -1,118 +1,110 @@
-# 🌱 Soil Type Classification and Crop Recommendation System
+# CNN Soil Type Classifier 🌱
 
-A deep learning-based web application that classifies soil types from uploaded images and recommends suitable crops based on the predicted soil type. This system is built using a custom-trained CNN model and achieves **86% validation accuracy**.
-
----
+A deep learning-based web application that identifies soil types from images and recommends suitable crops for cultivation. The system achieves an accuracy of 83.3% in soil type classification.
 
 ## 🚀 Features
 
-- 🔍 Image-based soil type classification using CNN
-- 🌾 Automatic crop recommendations based on predicted soil
-- 🖼️ Manual image upload and random prediction support
-- 🧠 Streamlit-based interactive web interface
-- ✅ Supports 5 specific soil types:
+- Image-based soil type classification using CNN
+- Automatic crop recommendations based on soil type
+- User-friendly web interface built with Streamlit
+- Supports 5 different soil types:
   - Black Soil
   - Cinder Soil
   - Laterite Soil
   - Peat Soil
   - Yellow Soil
 
-> _Note: The model is trained to recognize only the above five soil types._
+## 📋 Prerequisites
 
----
+- Python 3.7+
+- Git
+- Google Drive account (for accessing the model)
 
-## 🧠 Model Summary
+## 🛠️ Installation
 
-- **Model Type:** Convolutional Neural Network (CNN)
-- **Input Shape:** 150x150 RGB images
-- **Output Classes:** 5 soil types
-- **Validation Accuracy:** 86%
-- **Libraries Used:** Keras, TensorFlow, NumPy, Streamlit
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/cnn-soil-type-classifier.git
+cd cnn-soil-type-classifier
+```
 
----
-
-## 📊 Training Performance
-
-The following graphs were generated during the training phase using the training notebook:
-
-### 📈 Training and Loss Accuracy
-![Training and Loss Accuracy](![output](https://github.com/user-attachments/assets/065ed660-30a7-4418-b931-d2c0a86e912e)
-)
-
-> _You can find the training code and graphs in `SOIL.ipynb`._
-
----
-
-## 📋 Requirements
-
-Install the required dependencies with:
-
+2. Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
 
-### `requirements.txt`
+## 📥 Accessing the Model
 
-```
-tensorflow
-keras
-streamlit
-numpy
-pillow
-```
+The trained model is available on Google Drive. Follow these steps to download and set up the model:
 
----
+1. Download the model file:
+   - Click on this link: [Download Model]([https://drive.google.com/your-model-link](https://drive.google.com/drive/folders/1n0oR9dz6a_AEsHSuSPyHdb-ibs1eNGv_?usp=sharing))
+   - The file will be named `soil_classifier_model.h5`
 
-## 🛠️ Installation & Usage
+2. Place the model file:
+   - Move the downloaded `soil_classifier_model.h5` file to the root directory of the project
+   - The file structure should look like this:
+     ```
+     cnn-soil-type-classifier/
+     ├── app.py
+     ├── soil_classifier_model.h5
+     ├── requirements.txt
+     └── ...
+     ```
 
-### 1. Clone the repository
+3. Verify the model:
+   - The model file should be approximately 55MB in size
+   - Make sure the file is not corrupted during download
 
-```bash
-git clone https://github.com/yourusername/soil-classifier.git
-cd soil-classifier
-```
+## 🎯 Usage
 
-### 2. Install dependencies
+### Local Deployment
 
-```bash
-pip install -r requirements.txt
-```
+1. Make sure you have downloaded the model file from Google Drive and placed it in the project root directory
 
-### 3. Run the application
-
+2. Start the Streamlit application locally:
 ```bash
 streamlit run app.py
 ```
 
-### 4. Open in your browser
+3. Open your web browser and navigate to the provided local URL (typically http://localhost:8501)
 
-Visit `http://localhost:8501` to interact with the app.
+4. Upload an image of soil through the web interface
 
----
+5. The system will:
+   - Display the uploaded image
+   - Classify the soil type
+   - Provide crop recommendations based on the identified soil type
+
+## 📁 Project Structure
+
+- `app.py` - Main Streamlit application
+- `soil_classifier_model.h5` - Trained deep learning model (download from Google Drive)
+- `SOIL.ipynb` - Jupyter notebook containing model training code
+- `s0il.py` - Additional utility functions
+- `requirements.txt` - Project dependencies
+
+## 🧪 Model Details
+
+- Model Architecture: Convolutional Neural Network (CNN)
+- Input Size: 150x150 pixels
+- Output Classes: 5 soil types
+- Accuracy: 83.3%
 
 ## 🌾 Crop Recommendations
 
-Each soil type corresponds to specific crop suggestions:
+The system provides specific crop recommendations for each soil type:
 
-- **Black Soil** → Cotton, Soybean, Sorghum, Maize, Sunflower, Millets, Pulses  
-- **Cinder Soil** → Millets, Oilseeds, Pulses _(used in hilly/volcanic areas with proper irrigation)_  
-- **Laterite Soil** → Tea, Coffee, Cashew, Coconut, Tapioca, Pineapple  
-- **Peat Soil** → Rice (Paddy), Potatoes, Sugar Beet, Vegetables  
-- **Yellow Soil** → Groundnut, Maize, Cotton, Pulses, Oilseeds
+- **Black Soil**: Cotton, Soybean, Sorghum, Maize, Sunflower, Millets, Pulses
+- **Cinder Soil**: Millets, Oilseeds, Pulses (used in hilly/volcanic areas with proper irrigation)
+- **Laterite Soil**: Tea, Coffee, Cashew, Coconut, Tapioca, Pineapple
+- **Peat Soil**: Rice (Paddy), Potatoes, Sugar Beet, Vegetables
+- **Yellow Soil**: Groundnut, Maize, Cotton, Pulses, Oilseeds
 
----
+## 🤝 Contributing
 
-### 🌐 Try the Deployed Streamlit App
-
-You can try the live app here:  
-👉 [Try the Streamlit Interface](https://soil-classifier-app.streamlit.app)
-
----
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
 
-This project is licensed under the **MIT License**.
-
----
-
-_Developed with ❤️ using Deep Learning and Streamlit_
+This project is licensed under the MIT License - see the LICENSE file for details.
