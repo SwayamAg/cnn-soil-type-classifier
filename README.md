@@ -109,8 +109,8 @@ Check out the working demo of the project in action! 👇
 [Click here to watch the demo video](Demo.mp4)
 
 This video showcases:
-- 🖼️ Soil image predictions  
-- 🌾 Real-time crop recommendations  
+- 🖼️ Soil type predictions  
+- 🌾 Crop recommendations  
 - 🖥️ Streamlit UI demonstration
 
 ## 🤝 Contributing
