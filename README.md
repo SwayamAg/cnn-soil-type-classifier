@@ -35,11 +35,9 @@ A deep learning-based web application that classifies soil types from uploaded i
 
 The following graphs were generated during the training phase using the training notebook:
 
-### 📈 Accuracy vs Epochs
-![Training Accuracy](assets/training_accuracy.png)
-
-### 📉 Loss vs Epochs
-![Training Loss](assets/training_loss.png)
+### 📈 Training and Loss Accuracy
+![Training and Loss Accuracy](![output](https://github.com/user-attachments/assets/065ed660-30a7-4418-b931-d2c0a86e912e)
+)
 
 > _You can find the training code and graphs in `SOIL.ipynb`._
 
@@ -92,23 +90,6 @@ Visit `http://localhost:8501` to interact with the app.
 
 ---
 
-## 📁 Project Structure
-
-```
-soil-classifier/
-├── app.py                   # Streamlit app
-├── s0il.py                  # Helper file for prediction
-├── SOIL.ipynb               # Jupyter notebook for training
-├── soil_classifier_model.h5 # Trained CNN model
-├── requirements.txt         # Python dependencies
-├── assets/                  # Graphs and images
-│   ├── training_accuracy.png
-│   └── training_loss.png
-└── README.md
-```
-
----
-
 ## 🌾 Crop Recommendations
 
 Each soil type corresponds to specific crop suggestions:
@@ -121,31 +102,16 @@ Each soil type corresponds to specific crop suggestions:
 
 ---
 
-## 🌐 Deployment
+### 🌐 Try the Deployed Streamlit App
 
-You can deploy this app on **Streamlit Cloud** easily:
-
-- Upload the project to a GitHub repo
-- Go to [Streamlit Cloud](https://streamlit.io/cloud) and link your GitHub
-- Set `app.py` as the entry point and provide the `requirements.txt`
-
----
-
-## 🙌 Contributing
-
-Feel free to fork this project, suggest improvements, or raise issues. Contributions are welcome!
+You can try the live app here:  
+👉 [Try the Streamlit Interface](https://soil-classifier-app.streamlit.app)
 
 ---
 
 ## 📝 License
 
 This project is licensed under the **MIT License**.
-
----
-
-## 📞 Contact
-
-Have feedback or questions? Feel free to open an issue in the repository.
 
 ---
 
