@@ -101,6 +101,18 @@ The system provides specific crop recommendations for each soil type:
 - **Peat Soil**: Rice (Paddy), Potatoes, Sugar Beet, Vegetables
 - **Yellow Soil**: Groundnut, Maize, Cotton, Pulses, Oilseeds
 
+## 📽️ Project Demo
+
+Check out the working demo of the project in action! 👇
+
+🎥 **Video Walkthrough:**  
+[Click here to watch the demo video](Demo.mp4)
+
+This video showcases:
+- 🖼️ Soil type predictions  
+- 🌾 Crop recommendations  
+- 🖥️ Streamlit UI demonstration
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -108,13 +120,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## 📝 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors and maintainers
-- Special thanks to the open-source community for their valuable tools and libraries
-- Thanks to Streamlit for providing an excellent platform for deploying ML applications
-
-## 📞 Contact
-
-For any queries or suggestions, please open an issue in the repository. 
