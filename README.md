@@ -1,4 +1,3 @@
-
 # 🌱 CNN Soil Type Classifier – Deployed on Streamlit!
 
 A deep learning-based web application that **identifies soil types from images** and **recommends suitable crops** for cultivation. The system achieves an **86% validation accuracy** across 5 soil classes.
@@ -99,7 +98,9 @@ streamlit run app.py
 - `soil_classifier_model.h5` – Trained CNN model  
 - `SOIL.ipynb` – Notebook used to train the model  
 - `s0il.py` – Helper functions  
-- `requirements.txt` – Dependencies
+- `requirements.txt` – Dependencies  
+- `Demo.mp4` – Project demo video  
+- `Soil types/` – Dataset containing soil images
 
 ---
 
