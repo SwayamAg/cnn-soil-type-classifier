@@ -58,6 +58,17 @@ if uploaded_file:
         class_names = ['Black Soil', 'Cinder Soil', 'Laterite Soil', 'Peat Soil', 'Yellow Soil']
         predicted_soil = class_names[predicted_class_index]
         
+        # Check if the image is from soil mapping
+        is_soil_mapping = False
+        for soil_type in soil.keys():
+            if soil_type.lower() in predicted_soil.lower():
+                is_soil_mapping = True
+                break
+
+        if not is_soil_mapping:
+            st.warning("⚠️ Warning: This image does not appear to be from soil mapping. Please upload an image of soil.")
+            st.stop()
+        
         # Display prediction and corresponding crop recommendations
         st.subheader(f"Predicted Soil Type: {predicted_soil}")
         st.write(f"Recommended Crop: {soil[predicted_soil]}")

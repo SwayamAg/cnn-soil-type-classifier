@@ -157,6 +157,17 @@ def predict_soil_type_from_image(image_path):
         raw_label = class_names[predicted_class_index]
         formatted_label = raw_label.replace('_', ' ').strip().title()
 
+        # Check if the image is from soil mapping
+        is_soil_mapping = False
+        for soil_type in soil.keys():
+            if soil_type.lower() in formatted_label.lower():
+                is_soil_mapping = True
+                break
+
+        if not is_soil_mapping:
+            print("⚠️ Warning: This image does not appear to be from soil mapping. Please upload an image of soil.")
+            return
+
         # Show image + prediction
         plt.figure()
         plt.imshow(load_img(image_path))
