@@ -59,30 +59,52 @@ plt.suptitle("📸 Sample Augmented Images")
 plt.tight_layout()
 plt.show()
 
-# 3️⃣ Define CNN Model
-model = Sequential([
-    Conv2D(32, (3,3), activation='relu', input_shape=(IMG_HEIGHT, IMG_WIDTH, 3)),
-    MaxPooling2D(2,2),
+# # 3️⃣ Define CNN Model
+# model = Sequential([
+#     Conv2D(32, (3,3), activation='relu', input_shape=(IMG_HEIGHT, IMG_WIDTH, 3)),
+#     MaxPooling2D(2,2),
 
-    Conv2D(64, (3,3), activation='relu'),
-    MaxPooling2D(2,2),
+#     Conv2D(64, (3,3), activation='relu'),
+#     MaxPooling2D(2,2),
 
-    Conv2D(128, (3,3), activation='relu'),
-    MaxPooling2D(2,2),
+#     Conv2D(128, (3,3), activation='relu'),
+#     MaxPooling2D(2,2),
 
-    Flatten(),
-    Dense(128, activation='relu'),
-    Dropout(0.4),
-    Dense(train_generator.num_classes, activation='softmax')
-])
+#     Flatten(),
+#     Dense(128, activation='relu'),
+#     Dropout(0.4),
+#     Dense(train_generator.num_classes, activation='softmax')
+# ])
 
-# 4️⃣ Compile the Model
-model.compile(optimizer='adam',
-              loss='categorical_crossentropy',
-              metrics=['accuracy'])
+# # 4️⃣ Compile the Model
+# model.compile(optimizer='adam',
+#               loss='categorical_crossentropy',
+#               metrics=['accuracy'])
 
 # 🧠 EarlyStopping
 early_stop = EarlyStopping(monitor='val_loss', patience=3, restore_best_weights=True)
+
+# 4️⃣ Transfer Learning with MobileNetV2
+from tensorflow.keras.applications import MobileNetV2
+from tensorflow.keras.layers import GlobalAveragePooling2D
+from tensorflow.keras.models import Model
+
+# Load the base model (exclude top classifier)
+base_model = MobileNetV2(weights='imagenet', include_top=False, input_shape=(IMG_HEIGHT, IMG_WIDTH, 3))
+base_model.trainable = False  # Freeze base layers
+
+# Custom classifier on top
+x = base_model.output
+x = GlobalAveragePooling2D()(x)
+x = Dense(128, activation='relu')(x)
+x = Dropout(0.4)(x)
+output = Dense(train_generator.num_classes, activation='softmax')(x)
+
+model = Model(inputs=base_model.input, outputs=output)
+
+# Compile
+model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
+
 
 # 5️⃣ Train the Model
 history = model.fit(
